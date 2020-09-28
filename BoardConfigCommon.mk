@@ -15,6 +15,7 @@
 # limitations under the License.
 #
 
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 COMMON_PATH := device/lge/msm8996-common
 
 # inherit from common lge
