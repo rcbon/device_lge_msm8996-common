@@ -186,9 +186,9 @@ Value * VerifyTrustZoneFn(const char *name, State *state, const std::vector<std:
     ret = 0;
     for (i = 0; i < argv.size(); i++) {
        LOG(INFO) << "\nComparing TZ version " << tz_version[i].c_str() << " == " << current_tz_version;
-       updater->UiPrint(android::base::StringPrintf("Comparing TZ versions:\n");
-       updater->UiPrint(android::base::StringPrintf("  Must be TZ version: %s\n", tz_version[i].c_str());
-       updater->UiPrint(android::base::StringPrintf("  Current TZ version: %s\n", current_tz_version);
+       updater->UiPrint(android::base::StringPrintf("Comparing TZ versions:\n"));
+       updater->UiPrint(android::base::StringPrintf("  Must be TZ version: %s\n", tz_version[i].c_str()));
+       updater->UiPrint(android::base::StringPrintf("  Current TZ version: %s\n", current_tz_version));
         if (strncmp(tz_version[i].c_str(), current_tz_version, tz_version[i].length()) == 0) {
             ret = 1;
             break;
@@ -233,6 +233,7 @@ int versionCompare(std::string v1, std::string v2) {
 
 /* verify_min_trustzone("TZ_VERSION", "TZ_VERSION", ...) */
 Value * VerifyMinTrustZoneFn(const char *name, State *state, const std::vector<std::unique_ptr<Expr>>& argv) {
+	auto updater = state->updater;
     char current_tz_version[TZ_VER_BUF_LEN];
     size_t i;
     int ret;
@@ -251,9 +252,9 @@ Value * VerifyMinTrustZoneFn(const char *name, State *state, const std::vector<s
     ret = 0;
     for (i = 0; i < argv.size(); i++) {
        LOG(INFO) << "\nComparing TZ version " << tz_version[i].c_str() << " <= " << current_tz_version;
-       updater->UiPrint(android::base::StringPrintf("Comparing TZ versions:\n");
-       updater->UiPrint(android::base::StringPrintf("      Min TZ version: %s\n", tz_version[i].c_str());
-       updater->UiPrint(android::base::StringPrintf("  Current TZ version: %s\n", current_tz_version);
+       updater->UiPrint(android::base::StringPrintf("Comparing TZ versions:\n"));
+       updater->UiPrint(android::base::StringPrintf("      Min TZ version: %s\n", tz_version[i].c_str()));
+       updater->UiPrint(android::base::StringPrintf("  Current TZ version: %s\n", current_tz_version));
         if ( versionCompare(tz_version[i].c_str(), current_tz_version) <= 0 ) {
             ret = 1;
             break;
@@ -265,6 +266,7 @@ Value * VerifyMinTrustZoneFn(const char *name, State *state, const std::vector<s
 
 /* verify_max_trustzone("TZ_VERSION", "TZ_VERSION", ...) */
 Value * VerifyMaxTrustZoneFn(const char *name, State *state, const std::vector<std::unique_ptr<Expr>>& argv) {
+	auto updater = state->updater;
     char current_tz_version[TZ_VER_BUF_LEN];
     size_t i;
     int ret;
@@ -283,9 +285,9 @@ Value * VerifyMaxTrustZoneFn(const char *name, State *state, const std::vector<s
     ret = 0;
     for (i = 0; i < argv.size(); i++) {
        LOG(INFO) << "\nComparing TZ version " << tz_version[i].c_str() << " >= " << current_tz_version;
-       updater->UiPrint(android::base::StringPrintf("Comparing TZ versions:\n");
-       updater->UiPrint(android::base::StringPrintf("      Max TZ version: %s\n", tz_version[i].c_str());
-       updater->UiPrint(android::base::StringPrintf("  Current TZ version: %s\n", current_tz_version);
+       updater->UiPrint(android::base::StringPrintf("Comparing TZ versions:\n"));
+       updater->UiPrint(android::base::StringPrintf("      Max TZ version: %s\n", tz_version[i].c_str()));
+       updater->UiPrint(android::base::StringPrintf("  Current TZ version: %s\n", current_tz_version));
         if ( versionCompare(tz_version[i].c_str(), current_tz_version) >= 0 ) {
             ret = 1;
             break;
