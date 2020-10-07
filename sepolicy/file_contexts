@@ -66,6 +66,7 @@
 /persist/encryption_log                                             u:object_r:mnt_vendor_file:s0
 /persist/properties                                                 u:object_r:mnt_vendor_file:s0
 /persist/usf                                                        u:object_r:mnt_vendor_file:s0
+/persist(/.*)?                                                      u:object_r:mnt_vendor_file:s0
 
 # Power management
 /sys/devices/soc/qpnp-smbcharger-16/power_supply/battery(/.*)?              u:object_r:sysfs_battery_supply:s0

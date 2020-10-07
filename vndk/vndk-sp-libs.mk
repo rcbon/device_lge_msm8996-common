@@ -23,7 +23,6 @@ VNDK_SP_LIBRARIES := \
     libhardware \
     libhidlbase \
     libhidlmemory \
-    libhwbinder \
     libion \
     libjsoncpp \
     liblzma \
