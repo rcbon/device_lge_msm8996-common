@@ -564,17 +564,10 @@ on post-fs-data
     mkdir /persist-lg/callfw 0770 radio radio
     mkdir /persist-lg/kmstore 0770 system system
     mkdir /persist-lg/lgdata 0771 radio radio
-    mkdir /persist-lg/lgdrm 0770 lgdrm lgdrm_acc
     mkdir /persist-lg/widevine 0770 drm system
     mkdir /persist-lg/firmware 0771 system system
     mkdir /persist-lg/secclk 0700 system system
     mkdir /persist-lg/chargerlogo 0770 system system
-    mkdir /persist-lg/multimedia 0770 media divxdrm
-    mkdir /persist-lg/multimedia/nx 0770 media divxdrm
-    mkdir /persist-lg/multimedia/uma 0770 media divxdrm
-    mkdir /persist-lg/multimedia/scnt 0770 media divxdrm
-    mkdir /persist-lg/multimedia/scnt/sdadf 0770 media divxdrm
-    mkdir /persist-lg/mms 0770 system lgmms
     mkdir /persist-lg/mmoprt 0771 system system
     mkdir /persist-lg/encryption 0771 system system
     mkdir /persist-lg/secureks 0770 system system
@@ -638,13 +631,6 @@ service vendor.cnd /vendor/bin/cnd
     user system
     group system wifi inet radio wakelock net_admin
     writepid /dev/cpuset/system-background/tasks
-
-service vendor.dpmd /vendor/bin/dpmd
-    class late_start
-    socket dpmd stream 660 root system
-    group system readproc
-    writepid /dev/cpuset/system-background/tasks
-    disabled
 
 service vendor.imsqmidaemon /vendor/bin/imsqmidaemon
     class main

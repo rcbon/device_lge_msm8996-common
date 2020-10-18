@@ -111,9 +111,7 @@ vendor/lib64/vendor.qti.latency@2.0.so|8c1d259051a4b53df78e8aaef3e98d93f3f10694
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|7aa7f06f7be48ec8ebbc83b4ea115b123364fed1
 
 # DPM - from OnePlus/OnePlus3/OnePlus3:9/PKQ1.181203.001/1903190014:user/release-keys
-bin/dpmd|b21c674c4e4b1d41d4540721d451c54caf3b0555
 etc/dpm/dpm.conf|fec89edb6cff81424a6c3a730fed92efa3613f72
-etc/init/dpmd.rc|52ca6ad920a1804e4ff608113cece063730f5e0c
 etc/permissions/com.qti.dpmframework.xml|36b94c9338069e434b83359a92cdc7ff62b822df
 etc/permissions/dpmapi.xml|ded29f9befaef20a7ccee0c75427fda1d1d04890
 framework/com.qti.dpmframework.jar|2a6ff555ebff148a508fc7ea2fbeaee4b9a2dff6

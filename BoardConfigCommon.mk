@@ -18,6 +18,7 @@
 COMMON_PATH := device/lge/msm8996-common
 
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
 
 # inherit from common lge
 -include device/lge/common/BoardConfigCommon.mk
