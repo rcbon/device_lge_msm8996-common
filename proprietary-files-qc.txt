@@ -417,7 +417,7 @@ etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
 -framework/QtiTelephonyServicelibrary.jar
 -framework/qcrilhook.jar
--framework/qti-telephony-common.jar
+-framework/qti-telephony-common.jar|a5bbb524382cecc3193da1b7dcf88afbb385b4bb
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/netmgrd
 vendor/bin/qti
